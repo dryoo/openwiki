@@ -1,0 +1,57 @@
+#navl{position:relative;display:inline-block;margin:0;padding:0}
+#navl li{position:relative;list-style:none;margin:0;font-size:12px;}
+#navl a{font-weight:700;color:#ccc;text-decoration:none;display:block;text-shadow:0 1px 1px rgba(0,0,0,.3);font-size:1em;line-height:24px;margin:0;padding:1px 4px}
+#navl .current a,#navl li:hover > a  {color:__hover__;text-shadow: 0px 0px 5px __hover__}
+#navl ul li:hover a,#navl li:hover li a{background:0;border:none;color: #ccc;}
+#navl ul a:hover{color:__hover__!important;-webkit-border-radius:0;-moz-border-radius:0;text-shadow:0 1px 1px __hover__ }
+#navl ul{background-color:#333;display:none;width:128px;position:absolute;top:1px;left:30px;border:solid 1px #111;-webkit-border-radius:9px;-moz-border-radius:9px;border-radius:9px;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.3);-moz-box-shadow:0 1px 3px rgba(0,0,0,.3);box-shadow:0 1px 3px rgba(0,0,0,.3);z-index:11;margin:0;padding:0;}
+#navl ul li{float:none;border-top:1px solid rgba(0,0,0,.11);margin:0;padding:0}
+#navl ul ul{left:120px;top:-2px}
+#navl ul li:first-child > a{-webkit-border-top-left-radius:9px;-moz-border-radius-topleft:9px;-webkit-border-top-right-radius:9px;-moz-border-radius-topright:9px}
+#navl ul li:last-child > a{-webkit-border-bottom-left-radius:9px;-moz-border-radius-bottomleft:9px;-webkit-border-bottom-right-radius:9px;-moz-border-radius-bottomright:9px}
+#navl:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+* html #navl{height:1%}
+ #navl em{display:block;float:left;width:24px;height:24px;margin-right:2px;background-repeat:no-repeat}
+
+#navl li:hover > ul,html[xmlns] #navl{display:block}
+#navl li .main {font-size:24px;}
+
+
+html.phone #navl {display:none;}
+
+#navl {
+.new-file-icon,.qna-icon,.rtype-icon,.sites-icon,.skin-icon,.skyrim-icon,.toxic-icon,.ultima-icon,.vl-icon,.wares-icon,.wiki-icon,.bb-icon,.blog-icon,.chat-icon,.coins-icon,.dk2-icon,.fallout-icon,.free-icon,.game-icon,.help-icon,.history-icon,.home-icon,.idioms-icon,.med-icon,.me-icon,.minecraft-icon,.brush-icon,.heart-icon,.tech-icon,.eveonline-icon,.skrik-icon{background:url(../vaslor2013/images/sprites.png) no-repeat;width:24px;height:24px}
+.bb-icon{background-position:-307px -11px}
+.blog-icon{background-position:-262px -23px}
+.brush-icon{background-position:-262px -65px}
+.chat-icon{background-position:-200px -21px}
+.coins-icon{background-position:-115px -24px}
+.dk2-icon{background-position:-109px -220px}
+.eveonline-icon{background-position:-350px -214px}
+.fallout-icon{background-position:-11px -221px}
+.free-icon{background-position:-15px -118px}
+.game-icon{background-position:-64px -64px}
+.heart-icon{background-position:-113px -66px}
+.help-icon{background-position:-163px -20px}
+.history-icon{background-position:-109px -168px}
+.home-icon{background-position:-11px -58px}
+.idioms-icon{background-position:-64px -15px}
+.me-icon{background-position:-67px -170px}
+.med-icon{background-position:-20px -15px}
+.minecraft-icon{background-position:-14px -164px}
+.new-file-icon{background-position:-201px -263px}
+.qna-icon{background-position:-164px -263px}
+.rtype-icon{background-position:-265px -214px}
+.sites-icon{background-position:-217px -61px}
+.skin-icon{background-position:-165px -65px}
+.skrik-icon{background-position:-64px -114px}
+.skyrim-icon{background-position:-215px -214px}
+.tech-icon{background-position:-309px -216px}
+.toxic-icon{background-position:-162px -170px}
+.ultima-icon{background-position:-159px -215px}
+.vl-icon{background-position:-458px -11px}
+.wares-icon{background-position:-409px -14px}
+.wiki-icon{background-position:-361px -17px}
+
+
+}

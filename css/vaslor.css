@@ -1,0 +1,304 @@
+html {background:none}
+body {
+    font: normal 100%/1.6 "나눔고딕", 'Malgun Gothic',"굴림", Arial, sans-serif;
+    /* default font size: 100% => 16px; 93.75% => 15px; 87.5% => 14px; 81.25% => 13px; 75% => 12px */
+    -webkit-text-size-adjust: 100%;
+}
+
+
+.dokuwiki {
+  table{margin: 0 auto;}
+  a:hover {text-shadow: 0px 0px 5px __hover__; color:__hover__;}
+}
+
+#wrapper .nav_header {
+background-color: rgba(27,27,27,0.8);
+
+display: block;
+position: relative;
+/* height:64px; */ color:#aaa;
+z-index:19;
+
+    .header_inner {max-width:__site_width__; margin:0 auto}
+    
+}
+
+html.phone .nav_header .site {padding:0 0.5em}
+html.desktop .nav_header .site, html.tablet .nav_header .site {padding:0 40px}
+html.phone #dokuwiki__header #qsearch__in {font-size:14px;}
+
+#dokuwiki__content {
+	 img {margin:0; max-width: 600px;}
+    img.media { margin-top:3px; border-radius: 6px;max-width:100%;}
+	img.mediacenter {max-width:100%;}
+    img.medialeft , img.mediaright { max-width: 50%;}
+    pre, samp, kbd, code, .edit {  font-family: "나눔고딕코딩",'돋움체','Andale Mono WT', "monospace"; }
+    pre {font-size:80%;}
+	ul {padding-left:0.5em;}
+	li {margin-left:1em;}
+    table {font-size:90%}
+    }
+	
+ #dokuwiki__content em {color: #8D3BAD;}
+
+ #dokuwiki__content code {
+    padding: 2px 4px;
+    border:none;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    white-space: nowrap;box-shadow:none;
+    border-radius: 4px;
+}
+
+ #dokuwiki__content strong {
+    padding: 2px 4px; color:#353555;
+    background-color: #f0f0ff;
+    white-space: nowrap;box-shadow:none;
+    border-radius: 4px;}
+
+
+
+.dokuwiki div.page {padding: 0.7em 1em 1em;}
+
+.dokuwiki .pageId {
+top: -1.8em;
+right: -0.5em;
+padding: 0.5em 0.5em 0;}
+
+.dokuwiki .breadcrumbs  .trace  {border:none!important}
+
+.dokuwiki #plugin__backlinks {
+	padding: 1%;
+ 	width:97%;
+	line-height: 1.2em;
+  	font-size:0.9em;
+  	border: 1px solid #EEE;
+	box-shadow: 0 0 .5em #999;
+	border-radius: 3px;
+	margin: 1em auto;
+	overflow:hidden;
+}
+
+.dokuwiki #plugin__backlinks .idx li{
+  	text-indent: 0;
+  	float:left;
+  	background-color: #fffffa;
+	a {display: inline-block; width:250px;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;}
+}
+
+.dokuwiki .tags {
+    margin-bottom: 1em;
+}
+
+#faceholder
+{
+border: 1px solid #EEE;
+box-shadow: 0 0 .5em #999;
+border-radius: 2px;
+margin: 1em auto;
+padding: 1em 2em;
+}
+
+#chat
+{
+border: 1px solid #EEE;
+box-shadow: 0 0 .5em #999;
+border-radius: 2px;
+margin: 1em auto;
+overflow-y:hidden;
+width:100%;
+}
+
+div.dokuwiki div.comment_form {
+  margin-top:none;  margin: 0 auto;
+  clear: both;
+}
+
+div.dokuwiki div.comment_wrapper {
+    border: 1px dashed #eea;
+    background-color: #fffffa;
+    margin: 1em 0; padding: 3px;
+    width:100%;
+    line-height: 1.2em;
+    font-size:0.9em;
+    overflow:hidden;
+    filter:alpha(opacity=80);
+    opacity:0.8;
+
+    border: 1px solid #EEE;
+    box-shadow: 0 0 .5em #999;
+    border-radius: 2px;
+    margin: 1em auto;
+}
+
+
+div.dokuwiki div#discussion__comment_preview {
+  padding: 1em;
+  margin-top: 1em;
+  display: none;
+}
+
+
+.dokuwiki div.editBox{margin: -15px -0.7em 0 -0.7em}
+
+div.dokuwiki ul.menulist  {margin:0;padding:0}
+div.dokuwiki .menulist li {display: inline; margin: 0 2px;
+list-style-type: none;float:right;
+font-size: 0.875em;}
+div.dokuwiki  div.breadcrumbs {border:none!important;float:left}
+div.dokuwiki  p {margin:0 0 1em 0;}
+
+/* AJAX quicksearch popup
+********************************************************************/
+
+#wrapper form.search div.no {
+    position: relative;
+}
+
+/* .JSpopup */
+#wrapper form.search div.ajax_qsearch {
+    position: absolute;
+    top: 0;
+    left: -13.5em; /* -( width of #qsearch__in + padding of .ajax_qsearch + a bit more ) */
+    width: 12em;
+    padding: 0.5em;
+    font-size: .9em;
+    z-index: 20;
+    text-align: left;
+    display: none;
+}
+[dir=rtl] #wrapper form.search div.ajax_qsearch {
+    left: auto;
+    right: -13.5em;
+    text-align: right;
+}
+#wrapper form.search div.ajax_qsearch strong {
+    display: block;
+    margin-bottom: .3em;
+}
+#wrapper form.search div.ajax_qsearch ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#wrapper form.search div.ajax_qsearch ul li {
+    margin: 0;
+    padding: 0;
+    display: block !important;
+}
+
+
+#dokuwiki__site .wrapper  { margin-bottom:0.5em;}
+/*#dokuwiki__site  .site {padding:0 1em}*/
+
+
+.dokuwiki div.breadcrumbs {margin-bottom:0; text-shadow: 1px 1px 2px #000;}
+
+#dokuwiki__content {
+    h1 , h2,h3  {    text-transform:uppercase;    text-shadow: 0px 0px 5px #789; }
+    h1,h2,h3 {border-bottom: 1px dotted #858585;}
+    h1,h2,h3,h4,h5  {color:#057}
+}
+
+.dokuwiki .page  h4 {margin-left: .666em;}
+.dokuwiki .page  h5 {margin-left: 1.776em;}
+.dokuwiki .page  div.level4 {margin-left: 1em;}
+.dokuwiki .page  div.level5 {margin-left: 2em;}
+
+
+.dokuwiki .content { padding:3px; color:#ccc}
+
+
+
+
+
+.dokuwiki td img {max-width:none}
+
+
+
+
+
+#dokuwiki__aside  {
+	font-size:14px;
+    .pad {margin: 1em 0.5em 0 0; background: url('images/navtile.jpg'); border-radius:5px;  }
+    li .li {color:#aaa}
+    th, td {border: none}
+    tr {border: 1px solid #111; background-color:#333; }
+    th {background-color: #334;}
+    table, tbody {border:none;}
+    tr:first-child {    border-radius: 6px; }
+    tr:last-child {    border-radius: 0 6px 0 0;}
+    tr:only-child{       border-radius: 6px 6px 0 0;}
+	h1, h2  {text-transform:uppercase;text-shadow: 0px 0px 5px #8888cc;}
+	
+ }   
+ 
+
+
+
+
+#dokuwiki__header  {
+     
+    padding:0;
+    .headings, .tools {margin-bottom:0}
+    #qsearch__in, .mobileTools {font-size:16px; line-height:1.2;margin-bottom:5px}
+	#qsearch__out a:focus {color:black;background-color:yellow;}
+	 .headings a {color: rgba(200,200,200,0.7);text-decoration:none; white-space:pre;  }
+	 .headings a:hover {color:__hover__;text-shadow: 0px 0px 5px #000;}
+}
+#dokuwiki__header .toolicons {
+ font-size:24px; line-height:1.2;
+   a:link,
+   a:visited {color:#ccc}
+   a:hover {text-shadow: 0px 0px 5px __hover__;color:__hover__}
+    li {margin:3px;}
+}
+#dokuwiki__sitetools ul {margin-top: 0;}
+#dokuwiki__sitetools form.search input.button {height:22px;}
+.dokuwiki table a {white-space: pre;}
+
+
+ .wrap_widget {width:246px;border-radius:7px; padding:2px;margin-right:1em;float:left; border:1px solid rgba(128,128,128,0.7);}
+
+.dokuwiki .wrap_menu {
+color: #999;
+margin: 0.5em 0!important;
+line-height: 1.2;
+font-size: 12px;
+border-top: #ddd 1px dotted;
+text-size:90%;
+}
+
+.dokuwiki .wrap_box p {margin:0;}
+.dokuwiki .wrap_menu  a {font-size: 20px;font-weight: bold;line-height: 1;}
+.dokuwiki .wrap_menu  a:hover {color: __hover__}
+
+
+#plugin__captcha_wrapper {
+border: 2px dotted red;
+padding: 0 1em;
+margin: 0 1em;
+text-align:center;
+background-color:yellow;
+border-radius: 5px;
+float:right;
+max-width:400px;
+}
+#dw__toc {
+margin-top:2.5em; 
+ ul ul {margin:0;padding:0}
+}
+.dokuwiki .section_highlight {background-color: rgba(100,100,128,0.2);}
+
+.dokuwiki #tool__bar img {border-radius:0;}
+
+#mediamanager__page {
+  font-size:12px;
+  img { border-radius: 0;}
+}
+#mediamanager__uploader {
+	background-color: yellow; border:2px dashed red; border-radius:7px; padding:4px;
+   .qq-upload-success  .qq-upload-size {display:none!important;}
+	
+	
+}
