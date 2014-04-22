@@ -150,7 +150,7 @@ $bg='http://openwiki.kr/bg_'.str_replace(':','_',$INFO['namespace']).'.jpg';
 
 <div class="clearer"></div>
                     <?php /*업로드*/ if  (($ACT=='edit'or ($ACT=='preview'))& ($INFO['isadmin'])) { ?>
-                    <iframe src="http://openwiki.kr/up?target=<?php echo getNS($ID) ?>" scrolling="no" style="width:100%;height:150px;border:none;margin:0;padding:0;overflow: hidden;" > </iframe>
+                    <iframe src="http://openwiki.kr/up?target=<?php echo str_replace(":","/",getNS($ID))?>" scrolling="no" style="width:100%;height:150px;border:none;margin:0;padding:0;overflow: hidden;" > </iframe>
                     <?php } ?>	
                     <?php /*참조문서 출력*/  if  ((ft_backlinks($ID)!=null) &&($INFO['namespace']!="") && (strrchr(':'.$INFO['id'],":")!=":home") &&  (($ACT=='edit') or ($ACT=='preview') or ($ACT="show") ) ) print p_render('xhtml',p_get_instructions('{{backlinks>.}}'),$info);?>
 

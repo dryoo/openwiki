@@ -30,7 +30,7 @@ html.phone #dokuwiki__header #qsearch__in {font-size:14px;}
 #dokuwiki__content {
 	 img {margin:0; max-width: 600px;}
     img.media { margin-top:3px; border-radius: 6px;max-width:100%;}
-	img.mediacenter {max-width:100%;}
+	img.mediacenter {max-width:100%; border-radius: 6px;}
     img.medialeft , img.mediaright { max-width: 50%;}
     pre, samp, kbd, code, .edit {  font-family: "나눔고딕코딩",'돋움체','Andale Mono WT', "monospace"; }
     pre {font-size:80%;}
@@ -51,9 +51,9 @@ html.phone #dokuwiki__header #qsearch__in {font-size:14px;}
 }
 
  #dokuwiki__content strong {
-    padding: 2px 4px; color:#353555;
-    background-color: #f0f0ff;
-    white-space: nowrap;box-shadow:none;
+    padding: 2px 4px; color: #444;
+    background-color: #eee;
+    box-shadow:none;
     border-radius: 4px;}
 
 
@@ -286,7 +286,7 @@ max-width:400px;
 }
 #dw__toc {
 margin-top:2.5em; 
- ul ul {margin:0;padding:0}
+ ul ul {margin:0;padding:0 0 0 1em}
 }
 .dokuwiki .section_highlight {background-color: rgba(100,100,128,0.2);}
 
