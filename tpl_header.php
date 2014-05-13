@@ -11,17 +11,15 @@ if (!defined('DOKU_INC')) die();
 
 <div class="pad group">
     <?php tpl_includeFile('header.html') ?>
-    <div class="headings group" style="min-height:20px;overflow:hidden;">
-     <!--   <ul class="a11y skip">
+    <div class="headings group" style="overflow:hidden;">
+    <ul class="a11y skip">
             <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
-        </ul> -->        
+        </ul>       
 <?php if ((!$_isMobile) && ($ACT!='edit') && ($ACT!='media')  ){
             $logoSize = array();
-            $logo = tpl_getMediaFile(array(':'.$INFO['namespace'].':logo.jpg',':'.$INFO['namespace'].':logo.png',':logo.png','/html/am/images/logo.png',':wiki:logo.png', 'images/logo.png'), false, $logoSize);
-			//tpl_link(  wl($INFO['namespace']),'<img style="max-width:185px" src="'.$logo.'" alt="" />','accesskey="h" title="[H]"'); ?>
-			<div style="text-align:center;float:left;width:185px;height:86px;background-image:url(<?=$logo?>);background-size:185px 86px;" ><div style="overflow:hidden;width:185px;position: absolute; bottom: 0;"><?php tpl_link(  wl($INFO['namespace']),p_get_first_heading(':'.$INFO['namespace'].':home'),'accesskey="h" title="[H]"');
-        ?></div></div>
-<?php } ?>
+            $logo = tpl_getMediaFile(array(':'.$INFO['namespace'].':logo.jpg',':'.$INFO['namespace'].':logo.png',':오늘:'.date("n월_j일").'.png',':logo.png',':wiki:logo.png', 'images/logo.png'), false, $logoSize); ?>
+			<div style="text-align:center;float:left;width:185px;height:86px;background-image:url(<?=$logo?>);background-size:185px 86px;" ></div>
+<?php } ?><div class="title" ><?php tpl_link(  wl($INFO['namespace']),p_get_first_heading(':'.$INFO['namespace'].':home'),'accesskey="h" title="[H]"');    ?></div>
     </div>
     <div class="tools group" >
         <!-- USER TOOLS -->

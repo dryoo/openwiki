@@ -80,17 +80,16 @@ if (!$_isMobile)  {
 $bg='http://openwiki.kr/bg_'.str_replace(':','_',$INFO['namespace']).'.jpg';
 //if (!file_exists($bg)) $bg="http://openwiki.kr/bg_.jpg";
 }?>
-<body style="background:#000 url(<?=$bg ?>) fixed center center no-repeat">
- <!-- <div class="ribbon-wrapper-green"><div class="ribbon-green">세월호 탑승객의 무사귀가를 염원합니다.</div></div>-->
+<body style="background:#E9EAED url(<?=$bg ?>) fixed center center no-repeat">
 <?php if ($_isMobile) include($_SERVER["DOCUMENT_ROOT"].'/am/nav.php');  /*뷀넷 헤더*/ ?>
 <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
 <div id="wrapper"  >
 
-<div class="nav_header">
-	<div class="header_inner">
-		<div class="site" style="">
+<div class="nav_header"> <?php /*표제부 시작 */ ?>
+	<div class="header_inner"><?php /* 가운데 맞추려면 필요  */ ?>
+		<div class="site" style=""><?php /* 진짜 표제부  */ ?>
          	<?php include('tpl_header.php') ?>
-         	<div style="position:fixed;top:9em;" >
+         	<div style="position:fixed;top:9em;" ><?php /* 이건 좌측 고정 메뉴  */ ?>
 				<div style="position:absolute; left:-32px;">
                 	<?php include('cssmenu.php') ?> 
          	   	</div>
@@ -141,8 +140,7 @@ $bg='http://openwiki.kr/bg_'.str_replace(':','_',$INFO['namespace']).'.jpg';
 
                 <div class="page group">
                     <?php // tpl_flush() ?>
-			       <div style="float:right" class="test" id="short_url"></div>
-					<!--[if lte IE 10]>IE 11을 권장합니다.<![endif]-->
+			     					<!--[if lte IE 10]>IE 11을 권장합니다.<![endif]-->
 					
                     <?php if (($ACT=='show' || $ACT=="showtag") && (!$noadsense))  include('adsense.php'); ?>
                     <!-- wikipage start -->
@@ -185,7 +183,7 @@ $bg='http://openwiki.kr/bg_'.str_replace(':','_',$INFO['namespace']).'.jpg';
 <?php if ($ACT=='show') { ?> 
 <div class="" style='float:left;width:298px;min-height:248px;border:1px #ccc solid'>
 <img  style="float:left" src="/qr?data=http://openwiki.kr/<?=str_replace(":","/",$ID)?>" title="http://openwiki.kr/<?=str_replace(":","/",$ID)?>" alt="http://openwiki.kr/<?=str_replace(":","/",$ID)?>">
-<div style="width:298px;text-weight:100"><?php echo $INFO['meta']['title']?></div>
+<div style="width:298px;text-weight:100"><a href="http://openwiki.kr/<?=str_replace(":","/",$ID)?>"><?php echo $INFO['meta']['title']?></a></div>
 <dl>
   <dt>마지막 수정</dt>
   <dd><?php echo @date('Y-m-d H:i:s.',$INFO['meta']['date']['modified']);?></dd>
@@ -245,43 +243,20 @@ $bg='http://openwiki.kr/bg_'.str_replace(':','_',$INFO['namespace']).'.jpg';
                     </ul>
                 </div>
             </div>
-        </div><!-- /wrapper -->
+
 
         <?php include('tpl_footer.php') ?>
     </div></div><!-- /site -->
     <?php  //include($_SERVER["DOCUMENT_ROOT"].'/am/vlfoot.php'); ?>
 	<?php // include('chat.php'); ?>
-	                <div class="docInfo"></div>
-                    
-     <script>
-      function appendResults(text) {
-        var results = document.getElementById('short_url');
-        //results.appendChild(document.createElement('P'));
-        results.appendChild(document.createTextNode(text));
-      }
-
-      function makeRequest() {
-        var request = gapi.client.urlshortener.url.insert({
-          'resource': { 'longUrl': 'http://openwiki.kr' }
-        });
-        request.execute(function(response) {
-          appendResults(response.shortUrl);
-        });
-      }
-
-      function load() {
-        gapi.client.setApiKey('AIzaSyCk3OGDenKduTy6nuxYtP-gVg0-QNxxMlg');
-        gapi.client.load('urlshortener', 'v1', makeRequest);
-      }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=load"></script>
-    
-	<div style="text-align:center;font-size:12px">
-		<?php tpl_pageinfo() ?><br>
+	    <div class="docInfo"></div>
+      	<div style="text-align:center;font-size:12px">
+		<?php tpl_pageinfo() ?>
 <?php /*챗 php processing time of the server */ printf("%.3f seconds in $ACT ing this page ($ID). ",(microtime(get_as_float)-$_pagestart));?></div>
     <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
     <div id="screen__mode" class="no"></div><?php /* helper to detect CSS media query in script.js */ ?>
     <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
     </div>
+        </div><!-- /wrapper -->
 </body>
 </html>

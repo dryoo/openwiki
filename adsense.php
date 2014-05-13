@@ -11,7 +11,7 @@
 </script>
 </div>
 <?php } else { ?>
-<center><a  href="http://bb.vaslor.net/index.php?mid=blank&act=dispMemberLoginForm"><span class="glyphicon glyphicon-log-in"></span> 로그인 하면 광고가 보이지 않게 됩니다.</a></center>
+<center><a  href="http://bb.openwiki.kr/index.php?mid=blank&act=dispMemberLoginForm"><span class="glyphicon glyphicon-log-in"></span> 로그인 하면 광고가 보이지 않게 됩니다.</a></center>
 <!--google adsense  위쪽-->
 <div style="text-align:center;overflow:hidden;margin: 0 auto  0.5em auto ;width:603px;height:252px;">
 
